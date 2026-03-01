@@ -1,1 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Face Detector</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+<header class="navbar">
+   <div class="logo">
+    <div class="logo-icon">
+        <img src="OIP.jpeg" alt="logo">
+    </div>
+    <div>
+        <h2>Face Detector</h2>
+        <p>Analyze & Detect Faces</p>
+    </div>
+</div>
+
+    <nav>
+        <a class="active" href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+
+    <h1>Upload Photo to Analyze Your Face!</h1>
+
+    <p class="subtitle">
+        Get Insights About Your 
+        <span>Facial Features, Symmetry</span> & More
+    </p>
+    <!-- Loading Screen -->
+<div id="loadingScreen" style="display:none;">
+    <div class="spinner"></div>
+    <p>Analyzing...</p>
+</div>
+
+<!-- Result Video -->
+<div id="resultSection" style="display:none;">
+    <video id="resultVideo" controls>
+        <source src="result.mp4" type="video/mp4">
+    </video>
+    <p class="credit">
+        Created by your lovely choota bhai ❤️
+    </p>
+</div>
+
+<div class="upload-container">
+
+    <div class="upload-box" id="uploadBox">
+
+        <!-- Default Upload View -->
+        <div id="defaultView">
+            <p>Choose or Take a Photo to Start</p>
+
+            <button class="upload-btn" onclick="openFilePicker()">
+                ⬆ Upload Photo / Click
+            </button>
+        </div>
+
+        <!-- After Upload View -->
+        <div id="uploadedView" style="display:none;">
+
+            <div class="preview-gallery" id="previewGallery"></div>
+
+            <div class="action-buttons">
+                <button onclick="openFilePicker()">➕ Add More</button>
+                <button class="analyze-btn">🧠 Analyze Photo</button>
+            </div>
+
+        </div>
+
+        <input type="file" id="fileInput" accept="image/*" multiple hidden>
+
+    </div>
+
+    <div class="requirements">
+        <span>👤 Front Face Required</span>
+        <span>☀ Good Lighting</span>
+        <span>🖼 JPG, PNG Supported</span>
+    </div>
+
+</div>
+
+</section>
+
+<section class="bottom-section">
+    <h2>Know More About Your Face</h2>
+    <p>Advanced AI Face Analysis in Seconds!</p>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
