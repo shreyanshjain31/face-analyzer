@@ -162,3 +162,41 @@ video {
     width: 90%;
     max-width: 400px;
 }
+/* ===== Mobile Responsive Navbar ===== */
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px 20px;
+        text-align: center;
+    }
+
+    .logo {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    nav {
+        margin-top: 10px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 5px 8px;
+        font-size: 14px;
+    }
+
+}
+@media (max-width: 768px) {
+
+    h2 {
+        font-size: 18px;
+    }
+
+    .logo-icon img {
+        width: 30px;
+        height: 30px;
+    }
+
+}
